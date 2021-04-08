@@ -9,12 +9,19 @@ namespace EmployeeManagement.Web.Pages
 {
     public class EmployeeListBase : ComponentBase
     {
-        public IEnumerable<Employee> Employees { get; set; }
-        protected override async Task OnInitializedAsync()
+        private IEnumerable<Employee> employees;
+
+        public IEnumerable<Employee> GetEmployees()
         {
-            await Task.Run(LoadEmployees);
-           
+            return employees;
         }
+
+        public void SetEmployees(IEnumerable<Employee> value)
+        {
+            employees = value;
+        }
+
+     
 
         private void LoadEmployees()
         {
@@ -67,7 +74,21 @@ namespace EmployeeManagement.Web.Pages
                 PhotoPath = "images/sara.png"
             };
 
-            Employees = new List<Employee> { e1, e2, e3, e4 };
+            SetEmployees(new List<Employee> { e1, e2, e3, e4 });
+        }
+        [Inject]
+        public IEmployeeService EmployeeService { get; set; }
+
+        public IEnumerable<Employee> Employees { get; set; }
+
+        protected override async Task OnInitializedAsync()
+        {
+            Employees = (await EmployeeService.GetEmployees()).ToList();
+        }
+
+        private void ToList()
+        {
+            throw new NotImplementedException();
         }
     }
 }
