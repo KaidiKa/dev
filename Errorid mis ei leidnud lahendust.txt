@@ -1,0 +1,6 @@
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS1662	Cannot convert lambda expression to intended delegate type because some of the return types in the block are not implicitly convertible to the delegate return type	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EditEmployee.razor	1	Active
+
+
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS0246	The type or namespace name 'Gender' could not be found (are you missing a using directive or an assembly reference?)	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EditEmployee.razor	53	Active
