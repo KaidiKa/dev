@@ -20,5 +20,6 @@ namespace EmployeeManagement.Models
         public int DepartmentId { get; set; }
         public string PhotoPath { get; set; }
         public object DateOfBirth { get; set; }
+        public Department Department { get; set; }
     }
 }
