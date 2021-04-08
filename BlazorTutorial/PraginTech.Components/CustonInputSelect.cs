@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.Forms;
 
-namespace EmployeeManagement.Web.Pages
+namespace Pragin.Components
 {
     public class CustomInputSelect<TValue> : InputSelect<TValue>
     {
