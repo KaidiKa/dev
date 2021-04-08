@@ -18,6 +18,8 @@ else
     {
         <DisplayEmployee Employee="employee" ShowFooter="ShowFooter">
         </DisplayEmployee>
+        <DisplayEmployee OnEmployeeSelection="EmployeeSelectionChanged">
+        </DisplayEmployee>
         <div class="card m-3" style="min-width: 18rem; max-width:30.5%;">
             <div class="card-header">
                 <h3>@employee.FirstName  @employee.LastName</h3>
