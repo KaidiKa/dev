@@ -16,6 +16,11 @@ namespace EmpolyeeManagement.Api.Models
             this.appDbContext = appDbContext;
         }
 
+        public async Task<Employee> GetEmployeeByEmail(string email)
+        {
+            return await appDbContext.Employees
+                .FirstOrDefaultAsync(e => e.Email == email);
+        }
         public async Task<IEnumerable<Employee>> GetEmployees()
         {
             return await appDbContext.Employees.ToListAsync();
@@ -67,5 +72,8 @@ namespace EmpolyeeManagement.Api.Models
                 await appDbContext.SaveChangesAsync();
             }
         }
+
+        
+        
     }
 }

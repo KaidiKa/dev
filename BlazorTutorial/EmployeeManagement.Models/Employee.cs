@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace EmployeeManagement.Models
@@ -18,5 +19,6 @@ namespace EmployeeManagement.Models
         public Gender Gender { get; set; }
         public int DepartmentId { get; set; }
         public string PhotoPath { get; set; }
+        public object DateOfBirth { get; set; }
     }
 }

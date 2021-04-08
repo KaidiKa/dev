@@ -5,9 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace EmpolyeeManagement.Api.Models
-{
-    
-    
+{   
         public interface IEmployeeRepository
         {
             Task<IEnumerable<Employee>> GetEmployees();

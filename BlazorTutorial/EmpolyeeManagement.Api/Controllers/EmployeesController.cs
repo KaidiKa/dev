@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EmpolyeeManagement.Api.Controllers
+namespace EmployeeManagement.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -33,6 +33,7 @@ namespace EmpolyeeManagement.Api.Controllers
                     "Error retrieving data from the database");
             }
         }
+
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Employee>> GetEmployee(int id)
         {
@@ -40,7 +41,10 @@ namespace EmpolyeeManagement.Api.Controllers
             {
                 var result = await employeeRepository.GetEmployee(id);
 
-                if (result == null) return NotFound();
+                if (result == null)
+                {
+                    return NotFound();
+                }
 
                 return result;
             }
@@ -50,28 +54,57 @@ namespace EmpolyeeManagement.Api.Controllers
                     "Error retrieving data from the database");
             }
         }
+
         [HttpPost]
         public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)
         {
             try
             {
                 if (employee == null)
+                {
                     return BadRequest();
+                }
+
+                var emp = employeeRepository.GetEmployeeByEmail(employee.Email);
+
+                if (emp != null)
+                {
+                    ModelState.AddModelError("email", "Employee email already in use");
+                    return BadRequest(ModelState);
+                }
 
                 var createdEmployee = await employeeRepository.AddEmployee(employee);
 
-                return CreatedAtAction(nameof(GetEmployee),
-                    new { id = createdEmployee.EmployeeId }, createdEmployee);
+                return CreatedAtAction(nameof(GetEmployee), new { id = createdEmployee.EmployeeId },
+                    createdEmployee);
             }
             catch (Exception)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError,
-                    "Error creating new employee record");
+                    "Error creating employee");
+            }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Employee>> UpdateEmployee(int id, Employee employee)
+        {
+            try
+            {
+                if (id != employee.EmployeeId)
+                    return BadRequest("Employee ID mismatch");
+
+                var employeeToUpdate = await employeeRepository.GetEmployee(id);
+
+                if (employeeToUpdate == null)
+                    return NotFound($"Employee with Id = {id} not found");
+
+                return await employeeRepository.UpdateEmployee(employee);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Error updating data");
             }
         }
     }
-}  
-    
-    
-    
-
+}
