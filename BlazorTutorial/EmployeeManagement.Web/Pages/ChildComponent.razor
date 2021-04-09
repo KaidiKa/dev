@@ -14,12 +14,10 @@
     [Parameter]
     public string Placeholder { get; set; } = "Child Component Placeholder";
 
-    [Parameter]
-    public Dictionary<string, object> InputAttributes { get; set; } =
-        new Dictionary<string, object>()
-        {
+    
+        
             { "placeholder", "Child Component Placeholder" }
-            };
+                
     [Parameter]
     public string Value { get; set; } = "Child Value";
 
@@ -27,14 +25,21 @@
     public Dictionary<string, object> InputAttributes { get; set; } =
     new Dictionary<string, object>();
 
-    { "placeholder", "Child Component Placeholder" }
-}
+{ "placeholder", "Child Component Placeholder" }
+
 };
-<h1 style="@ElementStyle">-Child Component</h1>
 
-<GrandChildComponent></GrandChildComponent>
 
+
+}
+<h1 style="@ElementStyle; @H1Border">-Child Component Text.</h1>
 @code {
     [CascadingParameter]
     public string ElementStyle { get; set; }
+
+    [CascadingParameter]
+    public int EmpAge { get; set; }
+
+    [CascadingParameter]
+    public string H1Border { get; set; }
 }
