@@ -4,3 +4,15 @@ Error	CS1662	Cannot convert lambda expression to intended delegate type because 
 
 Severity	Code	Description	Project	File	Line	Suppression State
 Error	CS0246	The type or namespace name 'Gender' could not be found (are you missing a using directive or an assembly reference?)	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EditEmployee.razor	53	Active
+
+
+Severity	Code	Description	Project	File	Line	Suppression State
+Error		The attribute names could not be inferred from bind attribute 'bind-Value'. Bind attributes should be of the form 'bind' or 'bind-value' along with their corresponding optional parameters like 'bind-value:event', 'bind:format' etc.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EditEmployee.razor	56	
+
+
+Severity	Code	Description	Project	File	Line	Suppression State
+Warning		Element 'option' cannot be nested inside element 'div'.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EditEmployee.razor	60	
+
+
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	RZ9991	The attribute names could not be inferred from bind attribute 'bind-Value'. Bind attributes should be of the form 'bind' or 'bind-value' along with their corresponding optional parameters like 'bind-value:event', 'bind:format' etc.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EditEmployee.razor	56	

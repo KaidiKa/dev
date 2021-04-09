@@ -103,6 +103,10 @@ namespace EmployeeManagement.Web.Pages
         {
             throw new NotImplementedException();
         }
+        protected async Task EmployeeDeleted()
+        {
+            Employees = (await EmployeeService.GetEmployees()).ToList();
+        }
     }
 }
     

@@ -25,5 +25,20 @@ namespace EmployeeManagement.Web.Pages
             IsSelected = (bool)e.Value;
             await OnEmployeeSelection.InvokeAsync(IsSelected);
         }
+        [Parameter]
+        public EventCallback<int> OnEmployeeDeleted { get; set; }
+
+        [Inject]
+        public IEmployeeService EmployeeService { get; set; }
+
+        [Inject]
+        public NavigationManager NavigationManager { get; set; }
+
+        protected async Task Delete_Click()
+        {
+            await EmployeeService.DeleteEmployee(Employee.EmployeeId);
+            await OnEmployeeDeleted.InvokeAsync(Employee.EmployeeId);
+            //NavigationManager.NavigateTo("/", true);
+        }
     }
 }
