@@ -2,31 +2,39 @@
 <input id="firstName" @attributes="InputAttributes" placeholder="Default Placeholder" />
 
 @code {
-        [Parameter]
-        public string Required { get; set; } = "required";
+    [Parameter]
+    public string Required { get; set; } = "required";
 
-        [Parameter]
-        public string Maxlength { get; set; } = "15";
+    [Parameter]
+    public string Maxlength { get; set; } = "15";
 
-        [Parameter]
-        public string Size { get; set; } = "25";
+    [Parameter]
+    public string Size { get; set; } = "25";
 
-        [Parameter]
-        public string Placeholder { get; set; } = "Child Component Placeholder";
+    [Parameter]
+    public string Placeholder { get; set; } = "Child Component Placeholder";
 
-        [Parameter]
-            public Dictionary<string, object> InputAttributes { get; set; } =
-            new Dictionary<string, object>()
-            {
+    [Parameter]
+    public Dictionary<string, object> InputAttributes { get; set; } =
+        new Dictionary<string, object>()
+        {
             { "placeholder", "Child Component Placeholder" }
             };
-        [Parameter]
-        public string Value { get; set; } = "Child Value";
+    [Parameter]
+    public string Value { get; set; } = "Child Value";
 
-        [Parameter(CaptureUnmatchedValues = true)]
-        public Dictionary<string, object> InputAttributes { get; set; } =
-        new Dictionary<string, object>();
-    
-        { "placeholder", "Child Component Placeholder" }
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> InputAttributes { get; set; } =
+    new Dictionary<string, object>();
+
+    { "placeholder", "Child Component Placeholder" }
 }
 };
+<h1 style="@ElementStyle">-Child Component</h1>
+
+<GrandChildComponent></GrandChildComponent>
+
+@code {
+    [CascadingParameter]
+    public string ElementStyle { get; set; }
+}

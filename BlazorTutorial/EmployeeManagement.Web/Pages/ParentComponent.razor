@@ -10,7 +10,19 @@
             { "required", "required" },
             { "placeholder", "Parent Component Placeholder" },
 
-                };
+                    };
     <ChildComponent placeholder="Parent Component Placeholder">
     </ChildComponent>
+}
+@page "/pc"
+
+<h1 style="@Color">Parent Component Text</h1>
+
+<CascadingValue Value="@Style">
+    <ChildComponent>
+    </ChildComponent>
+</CascadingValue>
+
+@code {
+        public string Style { get; set; } = "color:red";
 }
