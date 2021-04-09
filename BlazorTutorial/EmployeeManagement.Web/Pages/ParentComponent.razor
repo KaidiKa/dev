@@ -1,0 +1,16 @@
+﻿<ChildComponent required="required" maxlength="100" size="50"
+                placeholder="Parent Component Placeholder">
+</ChildComponent>
+<ChildComponent InputAttributes="attributesFromParent"  Value="Parent Value">
+</ChildComponent>
+
+@code {
+    public Dictionary<string, object> attributesFromParent { get; set; } =
+        new Dictionary<string, object>()
+        {
+            { "required", "required" },
+            { "placeholder", "Parent Component Placeholder" },
+            { "size", "50" },
+            { "maxlength", "5" }
+            };
+}
