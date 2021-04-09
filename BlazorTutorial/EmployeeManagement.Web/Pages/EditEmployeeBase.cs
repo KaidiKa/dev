@@ -29,6 +29,8 @@ namespace EmployeeManagement.Web.Pages
         public string Id { get; set; }
         [Inject]
         public IMapper Mapper { get; set; }
+        [Inject]
+        public NavigationManager NavigationManager { get; set; }
 
         protected async override Task OnInitializedAsync()
         {
@@ -50,7 +52,16 @@ namespace EmployeeManagement.Web.Pages
             
 
         }
-        protected void HandleValidSubmit()
-        { }
+        protected async Task HandleValidSubmit()
+        {
+            Mapper.Map(EditEmployeeModel, Employee);
+            var result = await EmployeeService.UpdateEmployee(Employee);
+            
+            if(result != null)
+            {
+                NavigationManager.NavigateTo("/");
+            }
+
+        }
     }
 }
