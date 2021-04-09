@@ -16,3 +16,22 @@ Warning		Element 'option' cannot be nested inside element 'div'.	EmployeeManagem
 
 Severity	Code	Description	Project	File	Line	Suppression State
 Error	RZ9991	The attribute names could not be inferred from bind attribute 'bind-Value'. Bind attributes should be of the form 'bind' or 'bind-value' along with their corresponding optional parameters like 'bind-value:event', 'bind:format' etc.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EditEmployee.razor	56	
+
+
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS1061	'object' does not contain a definition for 'DeleteEmployee' and no accessible extension method 'DeleteEmployee' accepting a first argument of type 'object' could be found (are you missing a using directive or an assembly reference?)	PraginTech.Components	B:\dev\BlazorTutorial\PraginTech.Components\ConfirmBase.cs	44	Active
+
+
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS1061	'object' does not contain a definition for 'EmployeeId' and no accessible extension method 'EmployeeId' accepting a first argument of type 'object' could be found (are you missing a using directive or an assembly reference?)	PraginTech.Components	B:\dev\BlazorTutorial\PraginTech.Components\ConfirmBase.cs	44	Active
+
+
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS1061	'object' does not contain a definition for 'InvokeAsync' and no accessible extension method 'InvokeAsync' accepting a first argument of type 'object' could be found (are you missing a using directive or an assembly reference?)	PraginTech.Components	B:\dev\BlazorTutorial\PraginTech.Components\ConfirmBase.cs	45	Active
+
+
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS1061	'object' does not contain a definition for 'EmployeeId' and no accessible extension method 'EmployeeId' accepting a first argument of type 'object' could be found (are you missing a using directive or an assembly reference?)	PraginTech.Components	B:\dev\BlazorTutorial\PraginTech.Components\ConfirmBase.cs	45	Active
+
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS0103	The name 'DeleteConfirmation' does not exist in the current context	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\DisplayEmployee.razor	27	Active

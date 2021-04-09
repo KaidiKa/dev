@@ -20,11 +20,7 @@ namespace EmployeeManagement.Web.Pages
         [Parameter]
         public EventCallback<bool> OnEmployeeSelection { get; set; }
 
-        protected async Task CheckBoxChanged(ChangeEventArgs e)
-        {
-            IsSelected = (bool)e.Value;
-            await OnEmployeeSelection.InvokeAsync(IsSelected);
-        }
+        
         [Parameter]
         public EventCallback<int> OnEmployeeDeleted { get; set; }
 
@@ -39,6 +35,11 @@ namespace EmployeeManagement.Web.Pages
             await EmployeeService.DeleteEmployee(Employee.EmployeeId);
             await OnEmployeeDeleted.InvokeAsync(Employee.EmployeeId);
             //NavigationManager.NavigateTo("/", true);
+        }
+        protected async Task CheckBoxChanged(ChangeEventArgs e)
+        {
+            IsSelected = (bool)e.Value;
+            await OnEmployeeSelection.InvokeAsync((bool)e.Value);
         }
     }
 }
