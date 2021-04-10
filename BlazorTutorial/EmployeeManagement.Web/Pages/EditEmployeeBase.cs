@@ -2,10 +2,13 @@
 using EmployeeManagement.Models;
 using EmployeeManagement.Web.Models;
 using EmployeeManagement.Web.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Authorization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace EmployeeManagement.Web.Pages
@@ -24,7 +27,7 @@ namespace EmployeeManagement.Web.Pages
         [Inject]
         public IDepartmentService DepartmentService { get; set; }
 
-        public List<Department> Departments { get; set; } = 
+        public List<Department> Departments { get; set; } =
             new List<Department>();
 
         [Parameter]
@@ -38,6 +41,17 @@ namespace EmployeeManagement.Web.Pages
 
         protected async override Task OnInitializedAsync()
         {
+            var authenticationState = await authenticationStateTask;
+            var user = (await authenticationStateTask).User;
+
+            if ((await AuthorizationService.AuthorizeAsync(user, "admin-policy"))
+            .Succeeded)
+
+                if (!authenticationState.User.Identity.IsAuthenticated)
+            {
+                string returnUrl = WebUtility.UrlEncode($"/editEmployee/{Id}");
+                NavigationManager.NavigateTo($"/identity/account/login?returnUrl={returnUrl}");
+            }
             int.TryParse(Id, out int employeeId);
 
             if (employeeId != 0)
@@ -84,5 +98,10 @@ namespace EmployeeManagement.Web.Pages
             await EmployeeService.DeleteEmployee(Employee.EmployeeId);
             NavigationManager.NavigateTo("/");
         }
+        [CascadingParameter]
+        private Task<AuthenticationState> authenticationStateTask { get; set; }
+
+        [Inject]
+        private IAuthorizationService AuthorizationService { get; set; }
     }
-}
+    }
