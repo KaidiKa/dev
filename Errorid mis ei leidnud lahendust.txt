@@ -1,37 +1,29 @@
 Severity	Code	Description	Project	File	Line	Suppression State
-Error	CS1662	Cannot convert lambda expression to intended delegate type because some of the return types in the block are not implicitly convertible to the delegate return type	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EditEmployee.razor	1	Active
-
-
-Severity	Code	Description	Project	File	Line	Suppression State
-Error	CS0246	The type or namespace name 'Gender' could not be found (are you missing a using directive or an assembly reference?)	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EditEmployee.razor	53	Active
-
-
-Severity	Code	Description	Project	File	Line	Suppression State
-Error		The attribute names could not be inferred from bind attribute 'bind-Value'. Bind attributes should be of the form 'bind' or 'bind-value' along with their corresponding optional parameters like 'bind-value:event', 'bind:format' etc.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EditEmployee.razor	56	
-
-
-Severity	Code	Description	Project	File	Line	Suppression State
-Warning		Element 'option' cannot be nested inside element 'div'.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EditEmployee.razor	60	
-
-
-Severity	Code	Description	Project	File	Line	Suppression State
-Error	RZ9991	The attribute names could not be inferred from bind attribute 'bind-Value'. Bind attributes should be of the form 'bind' or 'bind-value' along with their corresponding optional parameters like 'bind-value:event', 'bind:format' etc.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EditEmployee.razor	56	
-
-
-Severity	Code	Description	Project	File	Line	Suppression State
-Error	CS1061	'object' does not contain a definition for 'DeleteEmployee' and no accessible extension method 'DeleteEmployee' accepting a first argument of type 'object' could be found (are you missing a using directive or an assembly reference?)	PraginTech.Components	B:\dev\BlazorTutorial\PraginTech.Components\ConfirmBase.cs	44	Active
-
-
-Severity	Code	Description	Project	File	Line	Suppression State
-Error	CS1061	'object' does not contain a definition for 'EmployeeId' and no accessible extension method 'EmployeeId' accepting a first argument of type 'object' could be found (are you missing a using directive or an assembly reference?)	PraginTech.Components	B:\dev\BlazorTutorial\PraginTech.Components\ConfirmBase.cs	44	Active
-
-
-Severity	Code	Description	Project	File	Line	Suppression State
-Error	CS1061	'object' does not contain a definition for 'InvokeAsync' and no accessible extension method 'InvokeAsync' accepting a first argument of type 'object' could be found (are you missing a using directive or an assembly reference?)	PraginTech.Components	B:\dev\BlazorTutorial\PraginTech.Components\ConfirmBase.cs	45	Active
-
-
-Severity	Code	Description	Project	File	Line	Suppression State
-Error	CS1061	'object' does not contain a definition for 'EmployeeId' and no accessible extension method 'EmployeeId' accepting a first argument of type 'object' could be found (are you missing a using directive or an assembly reference?)	PraginTech.Components	B:\dev\BlazorTutorial\PraginTech.Components\ConfirmBase.cs	45	Active
-
-Severity	Code	Description	Project	File	Line	Suppression State
-Error	CS0103	The name 'DeleteConfirmation' does not exist in the current context	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\DisplayEmployee.razor	27	Active
+Error	CS8124	Tuple must contain at least two elements.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	CS1026	) expected	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	CS1519	Invalid token '-' in class, record, struct, or interface member declaration	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	CS8124	Tuple must contain at least two elements.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	CS8124	Tuple must contain at least two elements.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	CS8124	Tuple must contain at least two elements.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	CS1026	) expected	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	CS1519	Invalid token '=>' in class, record, struct, or interface member declaration	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	CS1519	Invalid token '=' in class, record, struct, or interface member declaration	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	CS1519	Invalid token '=' in class, record, struct, or interface member declaration	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	CS8124	Tuple must contain at least two elements.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	CS1519	Invalid token ';' in class, record, struct, or interface member declaration	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	IDE1007	The name '__o' does not exist in the current context.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	IDE1007	The name '__builder.AddAttribute' does not exist in the current context.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	IDE1007	The name '__builder' does not exist in the current context.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	IDE1007	The name 'AddAttribute' does not exist in the current context.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	IDE1007	The name '__builder2' does not exist in the current context.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	IDE1007	The name '__o' does not exist in the current context.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\ParentComponent.razor	1	Active
+Error	CS0103	The name 'context' does not exist in the current context	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Shared\NavMenu.razor	34	Active
+Message	IDE0044	Make field readonly	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Models\ComparePropertyAttribute.cs	7	Active
+Message	IDE0052	Private member 'ComparePropertyAttribute.v' can be removed as the value assigned to it is never read.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Models\ComparePropertyAttribute.cs	7	Active
+Message	IDE0044	Make field readonly	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Models\ComparePropertyAttribute.cs	8	Active
+Message	IDE0052	Private member 'ComparePropertyAttribute.errorMessage' can be removed as the value assigned to it is never read.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Models\ComparePropertyAttribute.cs	8	Active
+Message	IDE0059	Unnecessary assignment of a value to 'result'	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EditEmployeeBase.cs	81	Active
+Message	IDE1006	Naming rule violation: These words must begin with upper case characters: authenticationStateTask	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EditEmployeeBase.cs	102	Active
+Message	IDE0054	Use compound assignment	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EmployeeDetailsBase.cs	41	Active
+Message	IDE0051	Private member 'EmployeeListBase.LoadEmployees' is unused.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EmployeeListBase.cs	38	Active
+Message	IDE0051	Private member 'EmployeeListBase.ToList' is unused.	EmployeeManagement.Web	B:\dev\BlazorTutorial\EmployeeManagement.Web\Pages\EmployeeListBase.cs	102	Active
